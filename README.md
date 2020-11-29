@@ -17,7 +17,7 @@ Weblogger Brasil vai publicar o seguinte:
 Outro atalho serve para colocar texto em negrito, o que, em HTML, é feito com as tags < b> e < /b> . Weblogger Brasil permite aos autores fazer o mesmo com pares do caractere asterisco, '*'.
 
 Quando um autor escreve o texto
-  Marque a conta  *****a receber***** para  *****paga*****
+  Marque a conta  * *a receber* * para  * *paga* *
                 
 ele vai sair no website assim:
   Marque a conta <b>< b>a receber< /b></b> para <b>< b>paga< /b></b> .
