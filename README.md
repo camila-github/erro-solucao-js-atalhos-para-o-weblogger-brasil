@@ -1,4 +1,4 @@
-## Treinamento Digital Innovation One - Exercicio - Atalhos para o weblogger brasil
+## Treinamento Digital Innovation One - Exercicio - Atalhos para o weblogger brasil (trocas tags)
 
 O exercicio publicado é referente ao treinamento do BOOTCAMP - Desenvolvedor NodeJS -  Introdução a busca e substituição em JavaScript.
 (https://digitalinnovation.one).
