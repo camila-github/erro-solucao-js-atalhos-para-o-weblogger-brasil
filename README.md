@@ -38,7 +38,7 @@ Marque a conta *a receber* para *paga*. | Marque a conta <b>a receber</b> para <
 
 
 ```javascript
-//SOLUçAO 1
+//SOLUCAO 1
 let linha = gets();
 do {
     trocarCaracter(linha);
