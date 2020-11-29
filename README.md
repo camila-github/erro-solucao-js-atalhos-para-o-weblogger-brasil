@@ -9,7 +9,7 @@ Você está ajudando a desenvolver um sistema de gerenciamento de weblog chamado
 Um atalho é usado para colocar texto em itálico. HTML faz isto com as tags <i> e </i>, mas no Weblogger Brasil um autor pode simplesmente colocar um pedaço de texto entre dois caracteres de sublinhado, '_'. 
 
 Portanto, onde um autor escreve
-  Você '_' deveria '_' ver a foca no zoologico!
+  Você ' _'deveria'_ ' ver a foca no zoologico!
                 
 Weblogger Brasil vai publicar o seguinte:
   Você '<i>' deveria '</i>' ver a foca no zoologico!
