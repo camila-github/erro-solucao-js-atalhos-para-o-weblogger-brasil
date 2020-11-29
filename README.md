@@ -34,7 +34,7 @@ Para cada linha de entrada seu programa deve gerar uma linha de saída com o tex
 Exemplos de Entrada  | Exemplos de Saída
 ------------- | -------------
 Você _ _deveria_ _ ver a foca no zoologico! | Você < i><i>deveria</i>< /i> ver a foca no zoologico!
-Marque a conta *****a receber***** para *****paga*****. | Marque a conta <b>< b><b>a receber</b>< /b> para < b><b>paga</b>< /b>.
+Marque a conta **** *a receber* **** para **** *paga* ****. | Marque a conta <b>< b><b>a receber</b>< /b> para < b><b>paga</b>< /b>.
 
 
 ```javascript
