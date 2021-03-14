@@ -1,7 +1,7 @@
-## Treinamento Digital Innovation One - Exercicio - Atalhos para o weblogger brasil (trocar tags)
+## Exercicio - Atalhos para o weblogger brasil (trocar tags)
 
-O exercicio publicado é referente ao treinamento do BOOTCAMP - Desenvolvedor NodeJS -  Introdução a busca e substituição em JavaScript.
-(https://digitalinnovation.one).
+O exercicio publicado é referente ao treinamento do BOOTCAMP - Desenvolvedor NodeJS -  Introdução a busca e substituição em JavaScript.(https://digitalinnovation.one).
+
 
 #### Descrição do Desafio:
 
@@ -27,6 +27,7 @@ ele vai sair no website assim:
 
 A entrada contem vários casos de teste. Cada caso de teste é composto por uma linha que contem uma string texto, com zero ou mais usos dos atalhos itálico e negrito. Cada texto tem de 1 a 50 caracteres, inclusive. Os únicos caracteres permitidos no texto são os caracteres alfabéticos (de 'a' a 'z' e de 'A' a 'Z'), o sublinhado ('_'), o asterisco ('*'), o caractere de espaço e os símbolos de pontuação ',', ';', '.', '!', '?', '-', '(' e ')'. O caractere sublinhado '_' ocorre no texto um número par de vezes. O asterisco '*' também aparece um número par de vezes no texto. Nenhuma substring do texto entre um par de sublinhados ou entre um par de asteriscos pode conter outros sublinhados ou asteriscos, respectivamente.
 
+
 #### Saída:
 
 Para cada linha de entrada seu programa deve gerar uma linha de saída com o texto traduzido para HTML como demonstrado nos exemplos abaixo. Para tornar itálico um pedaço de texto no HTML, você deve iniciar este pedaço com a tag < i> e terminá-lo com a tag < /i>. Para texto em negrito, inicie com < b> e termine com < /b>.
@@ -39,6 +40,44 @@ Marque a conta * *a receber* * para * *paga* *. | Marque a conta <b>< b><b>a rec
 
 ```javascript
 //SOLUCAO 1
+const trocarCaracter = (texto) => {
+    /*troca o caracter sublinhado pela tag <i> e </i>*/
+    while((texto.indexOf("_")) != -1)  texto = texto.replace(/_(.*)/, "<i>$1").replace(/_(.*)/, "</i>$1");
+    /*troca o caracter asterisco pela tag <b> e </b>*/
+    while ((texto.indexOf("*")) != -1) texto = texto.replace(/\*(.*)/, "<b>$1").replace(/\*(.*)/, "</b>$1");
+    return texto;
+}
+
+(function casosDeTeste(num){    
+    while(num !== "") {
+        console.log(trocarCaracter(num));
+        num = gets();
+        /*No if(), valida se tem linhas em branco, caso sim, pula para a proxima linha*/
+        if (num == "") num = gets();
+    }
+})(gets());
+
+
+
+//SOLUCAO 2
+linha = gets();
+do {
+    trocarCaracter(linha);
+    /*valida se tem linhas em branco, caso sim, pula para a proxima linha*/
+    if ((linha = gets()) == "") linha = gets();
+} while (linha != "");
+
+function trocarCaracter(texto) {
+    /*troca o caracter sublinhado pela tag <i> e </i> */
+    while ((texto.indexOf("_")) != -1) texto = texto.replace(/_(.*)/, "<i>$1").replace(/_(.*)/, "</i>$1");
+    /*troca o caracter asterisco pela tag <b> e </b> */
+    while ((texto.indexOf("*")) != -1) texto = texto.replace(/\*(.*)/, "<b>$1").replace(/\*(.*)/, "</b>$1");
+    console.log(texto);
+}
+
+
+
+//SOLUCAO 3
 let linha = gets();
 do {
     trocarCaracter(linha);
@@ -63,22 +102,6 @@ function trocarCaracter(texto) {
         texto = auxTexto.replace(/\*(.*)/, "</b>$1");
         procuraTagB = texto.indexOf("*");
     }
-    console.log(texto);
-}
-
-//SOLUCAO 2 - Resumido
-linha = gets();
-do {
-    trocarCaracter(linha);
-    /*valida se tem linhas em branco, caso sim, pula para a proxima linha*/
-    if ((linha = gets()) == "") linha = gets();
-} while (linha != "");
-
-function trocarCaracter(texto) {
-    /*troca o caracter sublinhado pela tag <i> e </i> */
-    while ((texto.indexOf("_")) != -1) texto = texto.replace(/_(.*)/, "<i>$1").replace(/_(.*)/, "</i>$1");
-    /*troca o caracter asterisco pela tag <b> e </b> */
-    while ((texto.indexOf("*")) != -1) texto = texto.replace(/\*(.*)/, "<b>$1").replace(/\*(.*)/, "</b>$1");
     console.log(texto);
 }
 ```
